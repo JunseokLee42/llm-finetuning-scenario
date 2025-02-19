@@ -5,8 +5,6 @@ from peft import get_peft_model, LoraConfig, prepare_model_for_kbit_training
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 from trl import SFTConfig, SFTTrainer
 
-# Quantization: https://huggingface.co/docs/peft/en/developer_guides/quantization
-
 # 4 bit quantization
 bnb_config = BitsAndBytesConfig(
    load_in_4bit=True,
